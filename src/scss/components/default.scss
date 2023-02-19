@@ -1,0 +1,29 @@
+body {
+  overflow-x: hidden;
+  position: relative;
+	scroll-behavior: smooth;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 36px;
+}
+
+a,
+button {
+	color: $white;
+}
+
+.container {
+  max-width: 1199px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
