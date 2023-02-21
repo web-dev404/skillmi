@@ -1,5 +1,5 @@
 {
-  "name": "reliable",
+  "name": "skillmi",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -13,8 +13,10 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.4"
+  },
   "devDependencies": {
-    "aos": "^2.3.4",
     "autoprefixer": "^10.4.13",
     "browser-sync": "latest",
     "del": "latest",
