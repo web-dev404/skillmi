@@ -1,0 +1,80 @@
+.about {
+	&__wrapper {
+		box-shadow: 0px 12px 33px rgba(193, 213, 210, 0.33);
+		border-radius: 35px;
+		padding: 80px 57px 76px 100px;
+		display: flex;
+		position: relative;
+		margin-bottom: 23px;
+		background: $white;
+
+		&::before {
+			content: "";
+			display: block;
+			height: 370px;
+			width: 1386px;
+			position: absolute;
+			top: 50%;
+			left: -88px;
+			z-index: -1;
+			transform: translateY(-50%) rotate(-6.7deg);
+			background: radial-gradient(
+				133.9% 1838.09% at 0% 0%,
+				#41daa3 0%,
+				#bbda41 100%
+			);
+			border-radius: 35px;
+		}
+	}
+
+	&__item-left {
+		text-align: right;
+		max-width: 470px;
+		margin-right: 100px;
+	}
+
+	&__some-title {
+		font-weight: $title;
+		font-size: 35px;
+		line-height: 40px;
+		text-align: right;
+		text-transform: uppercase;
+		margin-bottom: 39px;
+	}
+
+	&__line {
+		width: 135px;
+		height: 19px;
+		object-fit: cover;
+		position: relative;
+		right: -23px;
+		margin-bottom: 45px;
+	}
+
+	&__img-wrap {
+		border-radius: 20px;
+		overflow: hidden;
+	}
+
+	&__img {
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__item-right {
+		max-width: 417px;
+	}
+
+	&__title {
+		font-weight: $bold;
+		font-size: 26px;
+		line-height: 33px;
+		margin-bottom: 34px;
+	}
+
+	&__description {
+		font-weight: $normal;
+		font-size: 16px;
+		line-height: 26px;
+	}
+}

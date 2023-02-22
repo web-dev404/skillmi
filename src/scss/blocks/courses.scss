@@ -1,0 +1,259 @@
+.courses {
+	&__wrapper {
+		padding: 57px 101px 76px 98px;
+		background: $white;
+		box-shadow: 0px 12px 33px rgba(193, 213, 210, 0.33);
+		border-radius: 35px;
+		position: relative;
+	}
+
+	&__line-top {
+		position: absolute;
+		top: 4px;
+		left: -111px;
+		width: 262px;
+		height: 218px;
+		object-fit: cover;
+		z-index: -1;
+	}
+
+	&__line-bottom {
+		position: absolute;
+		bottom: 256px;
+		right: -240px;
+		width: 320px;
+		height: 486px;
+		object-fit: cover;
+		z-index: -1;
+	}
+
+	&__inner {
+		text-align: center;
+		margin-bottom: 29px;
+	}
+
+	&__title {
+		font-weight: $title;
+		font-size: 35px;
+		line-height: 40px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	&__subtitle {
+		font-weight: $subtitle;
+		font-size: 18px;
+		line-height: 40px;
+		color: $gray;
+		margin-bottom: 5px;
+	}
+
+	&__infinity {
+		width: 39px;
+		height: 19px;
+		object-fit: cover;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 30px 28px;
+		margin-bottom: 42px;
+	}
+
+	&__item {
+		border-radius: 25px;
+		overflow: hidden;
+		position: relative;
+		padding: 36px 33px;
+		color: $white;
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			border-radius: 50%;
+			z-index: 0;
+			right: 48px;
+			top: 22px;
+			background: #fffef1;
+			width: 174px;
+			height: 174px;
+		}
+		&-superbody {
+			color: $main;
+			background: linear-gradient(124.21deg, #f7f6ed 5.16%, #e8e3d4 102.93%);
+			.courses__description {
+				color: $lgray;
+			}
+			.courses__count {
+				color: $lgray;
+			}
+		}
+		&-luxurywoman {
+			background: linear-gradient(125.44deg, #fb9cb0 3.05%, #e46a87 99.03%);
+			&::before {
+				background: #ffb6c6;
+			}
+		}
+		&-heart {
+			background: linear-gradient(127.4deg, #9ec6ef 1.57%, #7cc8d9 99.02%);
+			&::before {
+				background: #d9ecff;
+			}
+		}
+		&-makeup {
+			background: linear-gradient(125.91deg, #d9a5e6 3.6%, #955ac4 96.17%);
+
+			&::before {
+				background: #fec4ff;
+			}
+		}
+	}
+
+	&__background {
+		position: absolute;
+		right: 9px;
+		bottom: 0;
+	}
+
+	&__icon {
+		margin-bottom: 20px;
+		object-fit: cover;
+	}
+
+	&__item-inner {
+		max-width: 213px;
+	}
+
+	&__curse-name {
+		font-weight: $title;
+		font-size: 22px;
+		line-height: 30px;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+
+	&__description {
+		font-weight: $normal;
+		font-size: 12px;
+		line-height: 20px;
+		margin-bottom: 13px;
+	}
+
+	&__rate {
+		display: flex;
+		align-items: center;
+		margin-bottom: 18px;
+	}
+
+	&__stars {
+		display: flex;
+		margin-right: 12px;
+	}
+
+	&__star {
+		width: 19px;
+		height: 19px;
+		object-fit: cover;
+		margin-right: 3px;
+		&:last-child {
+			margin: 0;
+		}
+		&-empty {
+			opacity: 0.4;
+		}
+	}
+
+	&__count {
+		font-weight: $subtitle;
+		font-size: 12px;
+		line-height: 20px;
+	}
+
+	&__more {
+		border-radius: 10px;
+		padding: 10px 35px;
+		font-weight: $bold;
+		font-size: 13px;
+		line-height: 24px;
+		text-align: center;
+		color: $white;
+		position: relative;
+		text-transform: uppercase;
+		background: rgba($color: $white, $alpha: 0.4);
+		&-black {
+			color: $main;
+		}
+	}
+
+	&__soon {
+		display: flex;
+		align-items: center;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(22px);
+		width: 100%;
+		justify-content: center;
+	}
+
+	&__shape {
+		width: 12px;
+		height: 16px;
+		object-fit: cover;
+		vertical-align: baseline;
+		margin-right: 16px;
+	}
+
+	&__subgrid {
+		color: $white;
+		background: linear-gradient(91.1deg, #f8a2a2 2.53%, #ffb7a0 100.85%);
+		border-radius: 25px;
+		padding: 7px 11px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		&-left {
+			text-align: right;
+			margin-right: 110px;
+		}
+		&-title {
+			font-weight: $title;
+			font-size: 20px;
+			line-height: 26px;
+			text-transform: uppercase;
+			max-width: 227px;
+			margin-bottom: 5px;
+		}
+		&-wait {
+			padding: 0 10px;
+			display: inline-block;
+			font-weight: $title;
+			background: #9ea8ff;
+			border-radius: 200px;
+			font-size: 14px;
+			line-height: 30px;
+		}
+		&-right {
+			position: relative;
+			border: 1px dashed $white;
+			border-radius: 25px;
+			padding: 14px 83px 14px 107px;
+		}
+		&-time {
+			left: -52px;
+			bottom: -20px;
+			position: absolute;
+		}
+		&-newest,
+		&-courses {
+			font-weight: $title;
+			font-size: 42px;
+			line-height: 45px;
+		}
+		&-newest {
+			padding-left: 35px;
+		}
+		&-coursers {
+		}
+	}
+}
