@@ -5,6 +5,7 @@ body {
 	font-family: SuisseIntl, sans-serif;
 	font-weight: 400;
 	scroll-behavior: smooth;
+	color: $main;
 	background-color: $lwhite;
 }
 
@@ -27,4 +28,14 @@ button {
 	width: 100%;
 	padding: 0 15px;
 	margin: 0 auto;
+	&-big {
+		max-width: 1846px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+	&-middle {
+		max-width: 1649px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
 }

@@ -1,3 +1,113 @@
 .footer {
-  
+	&__container {
+		background: $footer;
+		position: relative;
+		border-radius: 35px;
+		&_main {
+			&::before {
+				content: "";
+				width: 100%;
+				height: 70px;
+				top: -35px;
+				left: 0;
+				z-index: -1;
+				background: $footer;
+				position: absolute;
+			}
+		}
+	}
+
+	&__row {
+		padding: 40px 0 45px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__logo {
+		width: 141px;
+		height: 37px;
+		object-fit: cover;
+		margin-bottom: 45px;
+	}
+
+	&__license {
+		max-width: 215px;
+		font-size: 12px;
+		line-height: 22px;
+		color: rgba($color: $white, $alpha: 0.8);
+	}
+
+	&__link {
+		font-size: 14px;
+		line-height: 20px;
+		text-decoration-line: underline;
+		color: $green;
+		margin-bottom: 14px;
+	}
+
+	&__content {
+		padding: 11px 20px 7px 21px;
+		background: #3c4242;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 23px;
+	}
+
+	&__number {
+		font-weight: $subtitle;
+		font-size: 18px;
+		line-height: 30px;
+		color: $white;
+	}
+
+	&__mail-wrap {
+		color: $white;
+		font-size: 13px;
+		line-height: 30px;
+	}
+
+	&__mail {
+		text-decoration: underline;
+		color: $green;
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	&__socials-text {
+		font-weight: $bold;
+		font-size: 8px;
+		line-height: 30px;
+		color: $white;
+	}
+
+	&__socials-line {
+		width: 13px;
+		height: 1px;
+		background: $green;
+		margin: 0 15px;
+	}
+
+	&__icon {
+		&-telegram {
+			width: 18px;
+			height: 15px;
+			object-fit: cover;
+			margin-right: 26px;
+		}
+		&-vk {
+			width: 17px;
+			height: 11px;
+			object-fit: cover;
+		}
+	}
 }

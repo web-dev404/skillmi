@@ -14,7 +14,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "vanilla-lazyload": "^17.8.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
