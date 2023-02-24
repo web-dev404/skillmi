@@ -188,7 +188,7 @@
 
 		&::before {
 			background-color: $white;
-			animation: slide-progress 2s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+			animation: slide-progress 4.8s cubic-bezier(0.3, 0, 0.3, 1) forwards;
 
 			.swiper-paused & {
 				// opacity: 0;

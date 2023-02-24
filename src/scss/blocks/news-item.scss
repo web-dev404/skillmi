@@ -22,6 +22,9 @@
 		.news-item__more {
 			color: $main;
 		}
+		.news-item__date {
+			background: $white;
+		}
 	}
 	&__date {
 		text-align: center;

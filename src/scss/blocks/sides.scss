@@ -103,6 +103,18 @@
 		text-fill-color: transparent;
 	}
 
+	&__prefer-plus {
+		background: radial-gradient(
+			133.9% 1838.09% at 0% 0%,
+			#41daa3 0%,
+			#bbda41 100%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
+	}
+
 	&__prefer-subnum {
 		display: flex;
 		align-items: center;

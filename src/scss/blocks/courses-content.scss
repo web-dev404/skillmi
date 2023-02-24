@@ -1,0 +1,269 @@
+.courses-content {
+	position: relative;
+	background: url("../img/courses-content/background.png") right bottom
+		no-repeat;
+
+	&__slider {
+		position: relative;
+	}
+	&__arc {
+		position: absolute;
+		width: 189px;
+		height: 600px;
+		object-fit: cover;
+		top: 21%;
+	}
+	&__slide {
+		padding-left: 80px;
+		min-height: 1080px;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+	&__wrapper {
+		z-index: 1;
+		position: relative;
+		transform: translate(-50%);
+		transition: 0.8s;
+		opacity: 0;
+		max-width: 589px;
+	}
+
+	&__content {
+		max-width: 480px;
+	}
+
+	&__suptitle {
+		display: block;
+		font-weight: $title;
+		font-size: 14px;
+		line-height: 60px;
+		letter-spacing: 0.4em;
+		text-transform: uppercase;
+		background: radial-gradient(
+			133.9% 1838.09% at 0% 0%,
+			#41daa3 0%,
+			#bbda41 100%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
+	}
+
+	&__title {
+		font-weight: $title;
+		font-size: 50px;
+		line-height: 55px;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		font-size: 20px;
+		line-height: 30px;
+		margin-bottom: 20px;
+		color: $lgray;
+	}
+
+	.swiper-slide-active {
+		.courses-content__wrapper {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	&__prompt-item {
+		border-top: 1px solid #dee9e7;
+		padding-top: 19px;
+	}
+
+	&__prompt-row {
+		display: flex;
+		margin-bottom: 26px;
+	}
+
+	&__prompt-blank {
+		width: 32px;
+		height: 39px;
+		object-fit: cover;
+		margin-right: 20px;
+	}
+
+	&__prompt-description {
+		font-size: 15px;
+		line-height: 22px;
+	}
+
+	&__buttons {
+		display: flex;
+	}
+
+	&__button-test {
+		padding: 18px 60px;
+		margin-right: 15px;
+		font-weight: $title;
+		color: $white;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: center;
+		background: radial-gradient(
+				133.9% 1838.09% at 0% 0%,
+				#41daa3 0%,
+				#bbda41 100%
+			)
+			/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+		border-radius: 10px;
+	}
+
+	&__button-playmarket {
+		display: flex;
+		align-items: center;
+		font-weight: $title;
+		font-size: 14px;
+		line-height: 24px;
+		padding: 18px 19px;
+		text-align: center;
+		background: $white;
+		box-shadow: 0px 2px 6px #d6dfde;
+		border-radius: 10px;
+	}
+
+	&__button-icon {
+		width: 19px;
+		height: 19px;
+		object-fit: cover;
+		margin-right: 14px;
+	}
+
+	&__button-download {
+	}
+
+	&__circle {
+		top: 19%;
+		right: -26px;
+		position: absolute;
+		width: 450px;
+		height: 450px;
+		object-fit: cover;
+	}
+	&__photo {
+		position: absolute;
+		bottom: 0;
+		right: 240px;
+		transform: translateX(50%);
+	}
+	&__soon {
+		max-width: max-content;
+		background: $white;
+		border: 1px solid #d7e9e2;
+		border-radius: 10px;
+		padding: 18px 55px 20px 27px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__controls {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		z-index: 9;
+		left: 80px;
+		bottom: 99px;
+	}
+
+	&__soon-lock {
+		width: 12px;
+		height: 12px;
+		overflow: hidden;
+		margin-right: 15px;
+	}
+
+	&__soon-text {
+		font-weight: $bold;
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+	&__pagination {
+		width: auto !important;
+		display: flex;
+		margin-right: 48px;
+	}
+
+	&__play {
+		width: 70px;
+		height: 70px;
+		background: #45daa1;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&-icon {
+			width: 23px;
+			height: 23px;
+			object-fit: cover;
+		}
+	}
+
+	.swiper-pagination-bullet-custom {
+		display: block;
+		flex-shrink: 0;
+		width: 16px;
+		height: 16px;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.swiper-pagination-bullet-custom::before {
+		content: "";
+		display: block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.swiper-pagination-bullet-custom:not(:last-child) {
+		margin-right: 5px;
+	}
+
+	.swiper-pagination-bullet-custom svg {
+		display: none;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%) rotate(-90deg);
+	}
+	.swiper-pagination-bullet-custom--active svg {
+		display: block;
+	}
+
+	.swiper-pagination-bullet-custom--active svg circle {
+		stroke-dasharray: 56.5563;
+		stroke-dashoffset: 56.5563;
+		animation: BulletProgress calc(var(--delay) * 1ms) linear forwards reverse;
+	}
+
+	@keyframes BulletProgress {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+	.swiper-pagination-bullet-custom::before {
+		background-color: #becccc;
+	}
+
+	.swiper-pagination-bullet-custom--active::before {
+		background-color: transparent;
+	}
+
+	.swiper--pause .swiper-pagination-bullet-custom--active svg circle {
+		animation: none;
+	}
+}

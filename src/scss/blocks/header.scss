@@ -1,5 +1,12 @@
 .header {
 	padding: 18px 0;
+	&-over {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0;
+		z-index: 10;
+	}
 	&__row {
 		display: flex;
 		justify-content: space-between;

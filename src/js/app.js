@@ -1,6 +1,6 @@
 import * as flsFunctions from "./modules/functions.js";
 import Swiper from "swiper";
-import { Navigation, Pagination, EffectFade, Thumbs } from "swiper";
+import { Navigation, Pagination, EffectFade, Autoplay } from "swiper";
 import smoothScroll from "./modules/smooth-scroll.js";
 import AOS from "aos";
 import LazyLoad from "vanilla-lazyload";
@@ -10,14 +10,49 @@ var lazyLoadInstance = new LazyLoad({
 window.addEventListener("load", event => {
 	flsFunctions.isWebp();
 	const current = document.querySelector(".news__current");
+	const courses = new Swiper(".courses-content__slider", {
+		loop: true,
+		effect: "fade",
+		autoplay: {
+			disableOnInteraction: false,
+		},
+		fadeEffect: {
+			crossFade: true,
+		},
+		speed: 750,
+		modules: [Navigation, Pagination, EffectFade, Autoplay],
+		navigation: {
+			nextEl: ".courses-content__play",
+		},
+		pagination: {
+			el: ".courses-content__pagination",
+			bulletClass: "swiper-pagination-bullet-custom",
+			bulletActiveClass: "swiper-pagination-bullet-custom--active",
+			renderBullet: function (index, className) {
+				return `<div class="${className}" data-index="${index}">
+        <svg viewbox="0 0 20 20">
+            <circle r="8" cx="10" cy="10" fill="none" stroke-width="4" stroke="#45DAA1"/>
+        </svg>
+      </div>`;
+			},
+			clickable: "true",
+		},
+		on: {
+			init: function () {
+				const _self = this;
+				_self.el.style.setProperty("--delay", _self.params.autoplay.delay);
+			},
+		},
+	});
 	const news = new Swiper(".news__slider", {
 		speed: 1200,
 		autoplay: {
-			delay: 5000,
+			delay: 3000,
+			disableOnInteraction: false,
 		},
 		slidesPerView: 3,
 		spaceBetween: 33,
-		modules: [Navigation, Pagination],
+		modules: [Navigation, Pagination, Autoplay],
 		navigation: {
 			nextEl: ".news__next",
 		},
@@ -25,6 +60,7 @@ window.addEventListener("load", event => {
 			el: ".news__pagination",
 			clickable: "true",
 		},
+		watchSlidesProgress: true,
 		on: {
 			init: function () {
 				// alert(news.slides.length);
