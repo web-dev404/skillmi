@@ -7,15 +7,18 @@ $green: #acd03c;
 $lime: #bbda41;
 $orange: #f19f53;
 $turquoise: #48da9e;
+$hover: #45daa1;
 $footer: #2a3030;
 $lgray: #7a8987;
 $gwhite: #f0f4f4;
 $placeholder: #9ba9a9;
+$burger: #cddbdb;
 $title: 900;
 $subtitle: 500;
 $small-title: 600;
 $bold: 700;
 $normal: 400;
+
 // media
 $media_xxxl: "max-width: 1400px";
 $media_xxl: "max-width: 1300px";
@@ -28,3 +31,9 @@ $media_md2: "max-width: 700px";
 $media_sm: "max-width: 600px";
 $media_sm2: "max-width: 500px";
 $media_xs: "max-width: 400px";
+$media_xs2: "max-width: 375px";
+
+//transition
+$transition_menu: 1.2s;
+$transition_normal: 0.5s;
+$transition_fast: 0.3s;

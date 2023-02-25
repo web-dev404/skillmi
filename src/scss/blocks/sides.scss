@@ -2,6 +2,7 @@
 	padding: 119px 0 115px;
 	&__row {
 		display: flex;
+		justify-content: space-between;
 	}
 
 	&__col {
@@ -173,6 +174,138 @@
 			-webkit-text-fill-color: transparent;
 			background-clip: text;
 			text-fill-color: transparent;
+		}
+	}
+	&__mob {
+		display: none;
+	}
+	@media ($media_xxxl) {
+		&__photo {
+			width: 325px;
+			height: 272px;
+		}
+		&__item {
+			margin-left: auto;
+			max-width: max-content;
+			padding: 102px 0 0 70px;
+			margin-bottom: 24px;
+			&-more {
+				margin-left: 0;
+				margin-right: auto;
+				.sides__photo {
+					left: 0;
+				}
+				.sides__lightning {
+					right: 32px;
+					top: -66px;
+				}
+			}
+		}
+		&__title-lightning {
+			position: relative;
+			.sides__lightning {
+				right: auto;
+				bottom: auto;
+				left: -115px;
+				top: 10px;
+				z-index: -1;
+			}
+		}
+		&__col {
+			margin-right: 20px;
+		}
+	}
+	@media ($media_lg) {
+		padding: 64px 0 34px;
+		&__mob {
+			display: block;
+		}
+		&__col {
+			width: 100%;
+			margin-right: 0;
+		}
+		&__row {
+			flex-wrap: wrap;
+		}
+		&__col:last-child {
+			display: none;
+		}
+		&__item {
+			margin-left: auto;
+			max-width: max-content;
+			padding: 92px 0 0 70px;
+			margin-bottom: 24px;
+			&-more {
+				margin-left: 0;
+				margin-right: auto;
+				.sides__photo {
+					left: 0;
+				}
+				.sides__lightning {
+					display: none;
+				}
+			}
+		}
+	}
+	@media ($media_md2) {
+		&__title {
+			font-size: 30px;
+			line-height: 40px;
+			padding-left: 45px;
+			margin-bottom: 20px;
+			&-left {
+				padding-left: 30px;
+			}
+		}
+		&__title-lightning {
+			position: relative;
+			.sides__lightning {
+				right: auto;
+				bottom: auto;
+				left: -27px;
+				top: 10px;
+			}
+		}
+		&__content {
+			max-width: 276px;
+			margin-left: auto;
+			padding: 20px 18px 25px 23px;
+		}
+		&__photo {
+			width: 255px;
+			height: 172px;
+		}
+		&__lightning {
+			width: 70px;
+			height: 140px;
+			top: 15px;
+			right: 44px;
+		}
+		&__prefer {
+			margin: 0 auto;
+			padding: 25px 40px;
+		}
+		&__prefer-num {
+			font-size: 40px;
+			line-height: 45px;
+			margin-bottom: 12px;
+		}
+		&__prefer-people {
+			font-size: 15px;
+			line-height: 26px;
+		}
+		&__prefer-title {
+			font-size: 18px;
+			line-height: 22px;
+		}
+		&__content-title {
+			font-size: 14px;
+			line-height: 20px;
+			margin-bottom: 13px;
+		}
+		&__description {
+			font-size: 13px;
+			line-height: 20px;
 		}
 	}
 }

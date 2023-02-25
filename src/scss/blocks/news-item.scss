@@ -46,6 +46,7 @@
 	}
 
 	&__name {
+		display: block;
 		color: rgba($color: $white, $alpha: 0.7);
 		font-weight: $title;
 		font-size: 12px;
@@ -75,6 +76,11 @@
 		align-items: center;
 		color: $white;
 		text-decoration: none;
+		&:hover {
+			.news-item__more-text {
+				margin-right: 20px;
+			}
+		}
 	}
 
 	&__more-text {
@@ -83,11 +89,47 @@
 		line-height: 33px;
 		text-transform: uppercase;
 		margin-right: 12px;
+		transition: $transition_normal;
 	}
 
 	&__arrow {
 		width: 17px;
 		height: 15px;
 		object-fit: cover;
+	}
+
+	@media ($media_lg3) {
+		padding: 19px 40px 19px 14px;
+		&__date {
+			margin-right: 20px;
+			padding: 15px 18px;
+		}
+		&__day {
+			font-size: 20px;
+		}
+		&__subday {
+			font-size: 12px;
+		}
+		&__name {
+			font-size: 10px;
+			line-height: 12px;
+			margin-bottom: 9px;
+		}
+		&__slogan {
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 9px;
+		}
+		&__text {
+			font-size: 13px;
+			line-height: 20px;
+		}
+		&__more-text {
+			font-size: 10px;
+		}
+		&__arrow {
+			width: 10px;
+			height: 12px;
+		}
 	}
 }

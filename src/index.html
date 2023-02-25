@@ -1,4 +1,33 @@
 @@include('html/head.html', { "title": "Главная" })
+<header class="header header-hide">
+	<div class="container">
+		<div class="header__row">
+			<div class="header__burger">
+				<div class="header__burger-line"></div>
+			</div>
+			<a href="index.html" class="header__logo">
+				<img src="img/icons/icons.svg#header-logo" alt="logo" class='header__logo-icon'>
+			</a>
+			<nav class="header__nav">
+				<ul class="header__nav-list">
+					<li class="header__nav-item header__nav-item_active"><a href='index.html' class='header__nav-link'>О
+							SKILLMI</a>
+					</li>
+					<li class="header__nav-item"><a href='courses.html' class='header__nav-link'>КУРСЫ</a></li>
+					<li class="header__nav-item"><a href='#' class='header__nav-link'>РАСКРОЙТЕ СПОСОБНОСТИ</a></li>
+					<li class="header__nav-item"><a href='news.html' class='header__nav-link'>НОВОСТИ</a></li>
+				</ul>
+			</nav>
+			<div class="header__search">
+				<input type="text" class='header__search-field' placeholder='Поиск'>
+				<button class='header__search-btn'>
+					<img src="img/icons/icons.svg#search" alt="search" class='header__search-icon'>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
+@@include('html/first-screen.html', {})
 <main class="main">
 	@@include('html/about.html', {})
 	@@include('html/benefits.html', {})
@@ -11,17 +40,23 @@
 		<div class="container">
 			<div class="footer__row">
 				<div class="footer__item">
-					<a href="#"><img src="img/icons/icons.svg#logo" alt="logo" class='footer__logo'></a>
+					<a href="index.html" class='footer__logo-link'><img src="img/icons/icons.svg#logo" alt="logo"
+							class='footer__logo'></a>
+					<div class="footer__content footer__content-mobile">
+						<a href="#" class="footer__number">+7 (977) 852 93 46</a>
+						<span class="footer__mail-wrap">E-mail: <a href="#"
+								class='footer__mail'>SupSkillmi@yandex.ru</a></span>
+					</div>
 					<p class="footer__license">2023 - SkillMi. Все права защищены
 						и принадлежат владельцу</p>
 				</div>
-				<div class="footer__item">
+				<div class="footer__item footer__item-links">
 					<a href="#" class="footer__link">О компании</a>
-					<a href="#" class="footer__link">Курсы</a>
-					<a href="#" class="footer__link">Новости</a>
+					<a href="courses.html" class="footer__link">Курсы</a>
+					<a href="news.html" class="footer__link">Новости</a>
 					<a href="#" class="footer__link">Контакты</a>
 				</div>
-				<div class="footer__item">
+				<div class="footer__item footer__item-links">
 					<a href="#" class="footer__link">Политика конфиденциальности</a>
 					<a href="#" class="footer__link">Оферта</a>
 					<a href="#" class="footer__link">Политика обработки данных</a>
@@ -33,6 +68,8 @@
 						<span class="footer__mail-wrap">E-mail: <a href="#"
 								class='footer__mail'>SupSkillmi@yandex.ru</a></span>
 					</div>
+					<p class="footer__license footer__license-mobile">2023 - SkillMi. Все права защищены
+						и принадлежат владельцу</p>
 					<div class="footer__socials">
 						<span class="footer__socials-text">МЫ В СОЦИАЛКАХ</span>
 						<span class='footer__socials-line'></span>

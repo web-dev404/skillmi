@@ -1,5 +1,6 @@
 .news {
 	color: $white;
+	padding: 0 15px;
 	&__container {
 		border-radius: 35px;
 		overflow: hidden;
@@ -201,6 +202,33 @@
 		line-height: 55px;
 		color: rgba($color: $white, $alpha: 0.5);
 		margin-right: 15px;
+	}
+	@media ($media_md2) {
+		padding: 0 15px;
+		&__container {
+			padding: 0;
+		}
+		&__wrap {
+			padding: 26px 0 22px;
+		}
+		&__box {
+			margin-bottom: 24px;
+		}
+		&__pagination {
+			margin-right: 20px;
+		}
+		.swiper-pagination-bullet {
+			margin-right: 12px !important;
+		}
+		&__title {
+			font-size: 20px;
+			line-height: 25px;
+			margin-bottom: 7px;
+		}
+		&__infinity {
+			width: 23px;
+			height: 11px;
+		}
 	}
 }
 

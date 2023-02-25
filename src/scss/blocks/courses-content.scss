@@ -1,8 +1,8 @@
 .courses-content {
 	position: relative;
-	background: url("../img/courses-content/background.png") right bottom
+	background: url("../img/courses-content/background.png") right bottom / cover
 		no-repeat;
-
+	overflow: hidden;
 	&__slider {
 		position: relative;
 	}
@@ -135,9 +135,6 @@
 		margin-right: 14px;
 	}
 
-	&__button-download {
-	}
-
 	&__circle {
 		top: 19%;
 		right: -26px;
@@ -177,6 +174,21 @@
 		height: 12px;
 		overflow: hidden;
 		margin-right: 15px;
+	}
+
+	&__photo {
+		&-1 {
+			max-width: 549px;
+		}
+		&-3 {
+			max-width: 620px;
+		}
+		&-2 {
+			max-width: 600px;
+		}
+		&-4 {
+			max-width: 700px;
+		}
 	}
 
 	&__soon-text {
@@ -265,5 +277,89 @@
 
 	.swiper--pause .swiper-pagination-bullet-custom--active svg circle {
 		animation: none;
+	}
+	@media ($media_lg3) {
+		&__slider {
+			padding-top: 100px;
+		}
+		&__slide {
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			padding-left: 0;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+		&__controls {
+			width: 100%;
+			top: 29%;
+			transform: translateY(-50%);
+			bottom: auto;
+			left: 0;
+			justify-content: space-between;
+		}
+		&__title {
+			font-size: 28px;
+			line-height: 33px;
+		}
+		&__wrapper {
+			margin-bottom: auto;
+		}
+		// .swiper-wrapper {
+		// 	align-items: flex-end;
+		// }
+		&__suptitle {
+			font-size: 10px;
+			line-height: 15px;
+			margin-bottom: 10px;
+		}
+		&__arc {
+			display: none;
+		}
+		&__photo {
+			padding-top: 94px;
+			width: 100%;
+			position: static;
+			transform: translateX(0);
+		}
+		&__circle {
+			width: 275px;
+			height: 275px;
+			top: 48%;
+			right: 73px;
+		}
+		&__button-test {
+			font-size: 9px;
+			line-height: 12px;
+			padding: 14px 15px;
+		}
+		&__subtitle {
+			font-size: 13px;
+			line-height: 20px;
+		}
+		&__prompt-row {
+			margin-bottom: 16px;
+		}
+		&__button-playmarket {
+			padding: 14px 14px;
+		}
+		&__button-download {
+			font-size: 9px;
+			line-height: 12px;
+		}
+		&__soon {
+			font-size: 10px;
+			line-height: 24px;
+		}
+	}
+	@media ($media_sm) {
+		&__controls {
+			top: 44%;
+		}
+	}
+	@media ($media_xs) {
+		&__buttons {
+			justify-content: space-between;
+		}
 	}
 }

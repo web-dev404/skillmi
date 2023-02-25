@@ -1,4 +1,5 @@
 .benefits {
+	overflow: hidden;
 	margin-bottom: 30px;
 	&__list {
 		counter-reset: num;
@@ -43,6 +44,9 @@
 			content: "0" counter(num) "";
 		}
 	}
+	&__slider {
+		display: none;
+	}
 	&__img-box {
 		width: 96px;
 		height: 96px;
@@ -65,5 +69,60 @@
 		line-height: 20px;
 		text-align: center;
 		text-transform: uppercase;
+	}
+	&__next-icon {
+		width: 15px;
+		height: 17px;
+		object-fit: cover;
+	}
+	@media ($media_lg) {
+		.swiper-scrollbar {
+			bottom: 0px;
+			left: 0;
+			height: 9px;
+		}
+		.swiper-scrollbar-drag {
+			background: radial-gradient(
+				133.9% 1838.09% at 0% 0%,
+				#41daa3 0%,
+				#bbda41 100%
+			);
+			height: 4px !important;
+			top: 3px;
+		}
+		&__slider {
+			overflow: hidden;
+			position: relative;
+			display: block;
+		}
+		&__wrapper {
+			padding-bottom: 24px;
+		}
+		&__list {
+			display: none;
+		}
+		&__next-btn {
+			position: absolute;
+			right: -40px;
+			top: 50%;
+			transform: translateY(-50%);
+			display: none;
+			align-items: center;
+			justify-content: center;
+			width: 72px;
+			height: 72px;
+			background: $white;
+			box-shadow: inset 2px 0px 6px #ecf4f2;
+			z-index: 1;
+			border-radius: 50%;
+		}
+	}
+	@media ($media_md2) {
+		&__slider {
+			overflow: visible;
+		}
+		&__next-btn {
+			display: flex;
+		}
 	}
 }

@@ -1,8 +1,11 @@
 .news-screen {
 	color: $white;
+	padding: 0 15px;
+	padding-top: 106px;
 	&__container {
 		background: center/cover url("../img/news-screen/background.png");
 		border-radius: 35px;
+		padding: 0 17px;
 		overflow: hidden;
 	}
 
@@ -61,5 +64,58 @@
 		font-weight: $subtitle;
 		font-size: 17px;
 		line-height: 40px;
+	}
+	@media ($media_lg) {
+		padding-top: 62px;
+		&__tag {
+			padding: 12px;
+		}
+		&__suptitle {
+			font-size: 14px;
+		}
+		&__title {
+			font-size: 34px;
+			line-height: 33px;
+			margin-bottom: 20px;
+		}
+		&__date-item {
+			font-size: 14px;
+		}
+	}
+	@media ($media_lg3) {
+		&__inner {
+			padding: 50px 0;
+		}
+		&__tag {
+			margin-bottom: 40px;
+		}
+	}
+	@media ($media_sm2) {
+		padding: 0 15px;
+		padding-top: 62px;
+		&__container {
+			padding: 0;
+			border-radius: 10px;
+		}
+		&__tag {
+			padding: 8px;
+			font-size: 9px;
+			line-height: 12px;
+			margin-bottom: 30px;
+		}
+		&__inner {
+			padding: 19px 0 44px;
+		}
+		&__suptitle {
+			font-size: 10px;
+		}
+		&__title {
+			font-size: 28px;
+			line-height: 33px;
+			margin-bottom: 20px;
+		}
+		&__date-item {
+			font-size: 12px;
+		}
 	}
 }

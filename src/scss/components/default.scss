@@ -7,6 +7,9 @@ body {
 	scroll-behavior: smooth;
 	color: $main;
 	background-color: $lwhite;
+	@media ($media_md2) {
+		background: $white;
+	}
 }
 
 h1,
@@ -29,13 +32,29 @@ button {
 	padding: 0 15px;
 	margin: 0 auto;
 	&-big {
-		max-width: 1846px;
-		padding: 0 15px;
+		max-width: 1816px;
 		margin: 0 auto;
 	}
 	&-middle {
 		max-width: 1649px;
-		padding: 0 15px;
 		margin: 0 auto;
+	}
+	@media ($media_lg) {
+		max-width: 900px;
+		&-big {
+			max-width: 870px;
+		}
+		&-middle {
+			max-width: 870px;
+		}
+	}
+	@media ($media_lg3) {
+		max-width: 700px;
+		&-big {
+			max-width: 670px;
+		}
+		&-middle {
+			max-width: 670px;
+		}
 	}
 }

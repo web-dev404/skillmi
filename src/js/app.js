@@ -1,19 +1,72 @@
 import * as flsFunctions from "./modules/functions.js";
 import Swiper from "swiper";
-import { Navigation, Pagination, EffectFade, Autoplay } from "swiper";
+import {
+	Navigation,
+	Pagination,
+	EffectFade,
+	Autoplay,
+	Scrollbar,
+} from "swiper";
 import smoothScroll from "./modules/smooth-scroll.js";
 import AOS from "aos";
 import LazyLoad from "vanilla-lazyload";
-var lazyLoadInstance = new LazyLoad({
-	// Your custom settings go here
-});
+let lazyLoadInstance = new LazyLoad({});
+flsFunctions.isWebp();
 window.addEventListener("load", event => {
-	flsFunctions.isWebp();
 	const current = document.querySelector(".news__current");
+	const max = document.querySelector(".news__max");
+	const nav = document.querySelector(".header__nav");
+	const burger = document.querySelector(".header__burger");
+	burger &&
+		burger.addEventListener("click", e => {
+			burger.classList.toggle("header__burger_active");
+			if (burger.classList.contains("header__burger_active")) {
+				nav.closest(".header__row").classList.add("header__row_active");
+				nav.classList.add("header__nav_active");
+			} else {
+				nav.closest(".header__row").classList.remove("header__row_active");
+				nav.classList.remove("header__nav_active");
+			}
+		});
+	let header = document.querySelector(".header");
+	let sticky = header && header.offsetTop;
+	let more = document.querySelector(".courses__more-mob");
+	more &&
+		more.addEventListener("click", () => {
+			document
+				.querySelector(".courses__more-content")
+				.classList.add("courses__more-content_active");
+			more.closest(".courses__more-mob").remove();
+		});
+	function checkFixed() {
+		if (window.pageYOffset > sticky) {
+			header.classList.add("header-fixed");
+		} else {
+			header.classList.remove("header-fixed");
+			body.style.paddingTop = 0;
+		}
+	}
+	header &&
+		window.addEventListener("scroll", () => {
+			checkFixed();
+		});
+	const first = new Swiper(".first-screen__slider", {
+		loop: true,
+		speed: 1200,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		slidesPerView: "auto",
+		centeredSlides: true,
+		spaceBetween: 6,
+		modules: [Navigation, Pagination, Autoplay, Scrollbar],
+	});
 	const courses = new Swiper(".courses-content__slider", {
 		loop: true,
 		effect: "fade",
 		autoplay: {
+			delay: 5000,
 			disableOnInteraction: false,
 		},
 		fadeEffect: {
@@ -44,14 +97,36 @@ window.addEventListener("load", event => {
 			},
 		},
 	});
+	const benefits = new Swiper(".benefits__slider", {
+		speed: 1200,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		slidesPerView: 1,
+		spaceBetween: 15,
+		modules: [Navigation, Pagination, Autoplay, Scrollbar],
+		navigation: {
+			nextEl: ".benefits__next-btn",
+		},
+		breakpoints: {
+			700: {
+				slidesPerView: 2,
+			},
+		},
+		scrollbar: {
+			el: ".swiper-scrollbar",
+		},
+		watchSlidesProgress: true,
+	});
 	const news = new Swiper(".news__slider", {
 		speed: 1200,
 		autoplay: {
 			delay: 3000,
 			disableOnInteraction: false,
 		},
-		slidesPerView: 3,
-		spaceBetween: 33,
+		slidesPerView: 1,
+		spaceBetween: 15,
 		modules: [Navigation, Pagination, Autoplay],
 		navigation: {
 			nextEl: ".news__next",
@@ -61,59 +136,47 @@ window.addEventListener("load", event => {
 			clickable: "true",
 		},
 		watchSlidesProgress: true,
-		on: {
-			init: function () {
-				// alert(news.slides.length);
+		breakpoints: {
+			700: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			1100: {
+				slidesPerView: 3,
 			},
 		},
 	});
+	const newsMob = new Swiper(".news-content__slider", {
+		speed: 1200,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		spaceBetween: 10,
+		modules: [Navigation, Pagination, Autoplay],
+		navigation: {
+			nextEl: ".news__next",
+		},
+		breakpoints: {
+			900: {
+				slidesPerView: 5,
+				spaceBetween: 7,
+			},
+			700: {
+				slidesPerView: 2,
+				spaceBetween: 7,
+			},
+		},
+		watchSlidesProgress: true,
+	});
 	news.on("slideChange", function () {
 		current.textContent = news.realIndex + 1;
+		if (window.innerWidth <= 700) max.textContent = 6;
+		else if (window.innerWidth <= 900) max.textContent = 5;
+		else max.textContent = 4;
 	});
-	document.addEventListener(
-		"mouseenter",
-		event => {
-			const el = event.target;
-			if (el && el.matches && el.matches(".swiper-container")) {
-				// console.log('mouseenter');
-				// console.log('autoplay running', swiper.autoplay.running);
-				el.swiper.autoplay.stop();
-				el.classList.add("swiper-paused");
-
-				const activeNavItem = el.querySelector(
-					".swiper-pagination-bullet-active"
-				);
-				activeNavItem.style.animationPlayState = "paused";
-			}
-		},
-		true
-	);
-
-	document.addEventListener(
-		"mouseleave",
-		event => {
-			// console.log('mouseleave', swiper.activeIndex, swiper.slides[swiper.activeIndex].progress);
-			// console.log('autoplay running', swiper.autoplay.running);
-			const el = event.target;
-			if (el && el.matches && el.matches(".swiper-container")) {
-				el.swiper.autoplay.start();
-				el.classList.remove("swiper-paused");
-
-				const activeNavItem = el.querySelector(
-					".swiper-pagination-bullet-active"
-				);
-
-				activeNavItem.classList.remove("swiper-pagination-bullet-active");
-				// activeNavItem.style.animation = 'none';
-
-				setTimeout(() => {
-					activeNavItem.classList.add("swiper-pagination-bullet-active");
-					// activeNavItem.style.animation = '';
-				}, 10);
-			}
-		},
-		true
-	);
 });
 
 AOS.init({
@@ -136,7 +199,6 @@ AOS.init({
 	mirror: false, // whether elements should animate out while scrolling past them
 	anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
-
 // const swiperBanner = new Swiper('.swiper-banner', {
 //   loop: true,
 //   speed: 750,
