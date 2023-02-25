@@ -29,7 +29,6 @@ window.addEventListener("load", event => {
 			}
 		});
 	let header = document.querySelector(".header");
-	let sticky = header && header.offsetTop;
 	let more = document.querySelector(".courses__more-mob");
 	more &&
 		more.addEventListener("click", () => {
@@ -39,11 +38,10 @@ window.addEventListener("load", event => {
 			more.closest(".courses__more-mob").remove();
 		});
 	function checkFixed() {
-		if (window.pageYOffset > sticky) {
+		if (window.pageYOffset > 700) {
 			header.classList.add("header-fixed");
 		} else {
 			header.classList.remove("header-fixed");
-			body.style.paddingTop = 0;
 		}
 	}
 	header &&

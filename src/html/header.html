@@ -1,4 +1,4 @@
-<header class="header header-over">
+<header class="header header-over @@if (hide === 'true') {header-hide}">
   <div class="container">
     <div class="header__row">
       <div class="header__burger">
@@ -9,11 +9,15 @@
       </a>
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-item header__nav-item_active"><a href='index.html' class='header__nav-link'>О
+          <li class="header__nav-item @@if (name === 'home') {header__nav-item_active}"><a href='index.html'
+              class='header__nav-link'>О
               SKILLMI</a></li>
-          <li class="header__nav-item"><a href='courses.html' class='header__nav-link'>КУРСЫ</a></li>
-          <li class="header__nav-item"><a href='#' class='header__nav-link'>РАСКРОЙТЕ СПОСОБНОСТИ</a></li>
-          <li class="header__nav-item"><a href='news.html' class='header__nav-link'>НОВОСТИ</a></li>
+          <li class="header__nav-item @@if (name === 'courses') {header__nav-item_active}"><a href='courses.html'
+              class='header__nav-link'>КУРСЫ</a></li>
+          <li class="header__nav-item @@if (name === 'ability') {header__nav-item_active}"><a href='#'
+              class='header__nav-link'>РАСКРОЙТЕ СПОСОБНОСТИ</a></li>
+          <li class="header__nav-item @@if (name === 'news') {header__nav-item_active}"><a href='news.html'
+              class='header__nav-link'>НОВОСТИ</a></li>
         </ul>
       </nav>
       <div class="header__search">
