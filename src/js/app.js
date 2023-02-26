@@ -57,7 +57,6 @@ window.addEventListener("load", event => {
 		modules: [Navigation, Pagination, Autoplay, Scrollbar],
 	});
 	const courses = new Swiper(".courses-content__slider", {
-		loop: true,
 		effect: "fade",
 		autoplay: {
 			delay: 5000,
@@ -194,3 +193,16 @@ AOS.init({
 	mirror: false, // whether elements should animate out while scrolling past them
 	anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
+// const swiperBanner = new Swiper('.swiper-banner', {
+//   loop: true,
+//   speed: 750,
+//   modules: [Navigation, Pagination],
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: 'true',
+//   },
+// });
