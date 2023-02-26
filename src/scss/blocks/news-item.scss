@@ -12,7 +12,7 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
-		background: rgba($color: $gwhite, $alpha: 0.9);
+		background: $gwhite;
 		.news-item__name {
 			color: rgba($color: $main, $alpha: 0.7);
 		}
@@ -120,9 +120,10 @@
 			line-height: 24px;
 			margin-bottom: 9px;
 		}
-		&__text {
+		&__description {
 			font-size: 13px;
 			line-height: 20px;
+			margin-bottom: 0px;
 		}
 		&__more-text {
 			font-size: 10px;

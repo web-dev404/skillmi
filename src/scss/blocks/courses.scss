@@ -154,10 +154,11 @@
 	}
 
 	&__item-inner {
-		max-width: 213px;
+		max-width: 209px;
 	}
 
 	&__curse-name {
+		max-width: 220px;
 		font-weight: $title;
 		font-size: 22px;
 		line-height: 30px;
@@ -180,6 +181,7 @@
 
 	&__stars {
 		display: flex;
+		align-items: center;
 		margin-right: 12px;
 	}
 
@@ -272,6 +274,7 @@
 			line-height: 30px;
 		}
 		&-right {
+			max-width: 500px;
 			position: relative;
 			border: 1px dashed $white;
 			border-radius: 25px;
@@ -280,7 +283,7 @@
 		&-time {
 			width: 135px;
 			height: 175px;
-			left: -52px;
+			left: -42px;
 			bottom: -20px;
 			position: absolute;
 		}
@@ -371,9 +374,6 @@
 			padding: 57px 80px 76px 80px;
 			box-shadow: none;
 		}
-		&__more {
-			display: block;
-		}
 		&__grid {
 			grid-template-columns: 1fr;
 			margin-bottom: 38px;
@@ -388,7 +388,7 @@
 				margin-right: 70px;
 			}
 			&-right {
-				padding: 14px 24px 14px 43px;
+				padding: 14px 24px 14px 58px;
 			}
 			&-time {
 				width: 94px;
@@ -435,11 +435,11 @@
 		}
 		&__more {
 			font-size: 9px;
-			padding: 8px 55px;
+			padding: 8px 18px;
 		}
 		&__background {
 			width: 197px;
-			right: -19px;
+			right: -14px;
 		}
 		&__item {
 			&::before {
@@ -501,12 +501,9 @@
 			padding: 57px 60px 76px 60px;
 			box-shadow: none;
 		}
-		&__item-inner {
-			max-width: 165px;
-		}
 		&__description {
 			font-size: 12px;
-			line-height: 20px;
+			line-height: 18px;
 			margin-bottom: 6px;
 		}
 		&__curse-name {
@@ -515,7 +512,42 @@
 			margin-bottom: 10px;
 		}
 	}
+	@media ($media_sm) {
+		&__item {
+			padding: 20px 30px;
+			&-superbody {
+				.courses__background {
+					width: 160px;
+					height: 283px;
+				}
+			}
+			&-luxurywoman {
+				background: linear-gradient(125.44deg, #fb9cb0 3.05%, #e46a87 99.03%);
+			}
+			&-heart {
+				.courses__background {
+					width: 176px;
+					height: 269px;
+					right: -37px;
+				}
+			}
+			&-makeup {
+				.courses__background {
+					width: 233px;
+					height: 290px;
+					right: -30px;
+				}
+			}
+		}
+	}
 	@media ($media_sm2) {
+		&__item-inner {
+			max-width: 165px;
+		}
+		&::before {
+			top: 60px;
+			right: 22px;
+		}
 		&__wrapper {
 			padding: 0;
 			box-shadow: none;

@@ -51,10 +51,6 @@ window.addEventListener("load", event => {
 	const first = new Swiper(".first-screen__slider", {
 		loop: true,
 		speed: 1200,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false,
-		},
 		slidesPerView: "auto",
 		centeredSlides: true,
 		spaceBetween: 6,
@@ -124,7 +120,7 @@ window.addEventListener("load", event => {
 			disableOnInteraction: false,
 		},
 		slidesPerView: 1,
-		spaceBetween: 15,
+		spaceBetween: 10,
 		modules: [Navigation, Pagination, Autoplay],
 		navigation: {
 			nextEl: ".news__next",
@@ -141,6 +137,7 @@ window.addEventListener("load", event => {
 			},
 			1100: {
 				slidesPerView: 3,
+				spaceBetween: 27,
 			},
 		},
 	});

@@ -6,10 +6,7 @@ body {
 	font-weight: 400;
 	scroll-behavior: smooth;
 	color: $main;
-	background-color: $lwhite;
-	@media ($media_md2) {
-		background: $white;
-	}
+	background-color: $white;
 }
 
 h1,

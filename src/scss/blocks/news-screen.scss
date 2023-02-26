@@ -90,6 +90,11 @@
 			margin-bottom: 40px;
 		}
 	}
+	@media ($media_md2) {
+		&__container {
+			background: center/cover url("../img/news-screen/background-mob.png");
+		}
+	}
 	@media ($media_sm2) {
 		padding: 0 15px;
 		padding-top: 62px;

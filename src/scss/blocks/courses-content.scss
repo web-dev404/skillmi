@@ -1,7 +1,7 @@
 .courses-content {
 	position: relative;
-	background: url("../img/courses-content/background.png") right bottom / cover
-		no-repeat;
+	background: url("../img/courses-content/background.png") right bottom / 66%
+		100% no-repeat;
 	overflow: hidden;
 	&__slider {
 		position: relative;
@@ -34,7 +34,7 @@
 	}
 
 	&__suptitle {
-		display: block;
+		display: inline-block;
 		font-weight: $title;
 		font-size: 14px;
 		line-height: 60px;
@@ -154,7 +154,7 @@
 		background: $white;
 		border: 1px solid #d7e9e2;
 		border-radius: 10px;
-		padding: 18px 55px 20px 27px;
+		padding: 18px 55px 20px 14px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -279,8 +279,10 @@
 		animation: none;
 	}
 	@media ($media_lg3) {
+		background: url("../img/courses-content/background-2.png") right bottom /
+			100% 100% no-repeat;
 		&__slider {
-			padding-top: 100px;
+			padding-top: 90px;
 		}
 		&__slide {
 			height: auto;
@@ -299,15 +301,13 @@
 			justify-content: space-between;
 		}
 		&__title {
+			max-width: 260px;
 			font-size: 28px;
 			line-height: 33px;
 		}
 		&__wrapper {
-			margin-bottom: auto;
+			margin-bottom: 90px;
 		}
-		// .swiper-wrapper {
-		// 	align-items: flex-end;
-		// }
 		&__suptitle {
 			font-size: 10px;
 			line-height: 15px;
@@ -317,7 +317,6 @@
 			display: none;
 		}
 		&__photo {
-			padding-top: 94px;
 			width: 100%;
 			position: static;
 			transform: translateX(0);
@@ -325,13 +324,13 @@
 		&__circle {
 			width: 275px;
 			height: 275px;
-			top: 48%;
-			right: 73px;
+			top: 55%;
+			right: 16%;
 		}
 		&__button-test {
 			font-size: 9px;
-			line-height: 12px;
-			padding: 14px 15px;
+			line-height: 9px;
+			padding: 16px 16px;
 		}
 		&__subtitle {
 			font-size: 13px;
@@ -341,7 +340,7 @@
 			margin-bottom: 16px;
 		}
 		&__button-playmarket {
-			padding: 14px 14px;
+			padding: 12px 12px;
 		}
 		&__button-download {
 			font-size: 9px;
@@ -354,12 +353,53 @@
 	}
 	@media ($media_sm) {
 		&__controls {
-			top: 44%;
+			top: 42%;
+		}
+		&__slide {
+			min-height: unset;
 		}
 	}
 	@media ($media_xs) {
+		&__prompt-item {
+			padding-top: 15px;
+		}
+		&__subtitle {
+			margin-bottom: 10px;
+		}
+		&__prompt-row {
+			margin-bottom: 10px;
+		}
+		&__photo {
+			width: 100%;
+			margin: 0 auto;
+			&-1 {
+				width: 311px;
+				height: 530px;
+			}
+			&-2 {
+				width: 340px;
+				height: 540px;
+			}
+			&-3 {
+				width: 350px;
+				height: 530px;
+			}
+			&-4 {
+				position: relative;
+				left: -15px;
+				width: 100vw;
+				height: 560px;
+			}
+		}
 		&__buttons {
 			justify-content: space-between;
+		}
+		&__soon {
+			padding: 12px 45px 12px 14px;
+		}
+		&__prompt-description {
+			font-size: 11px;
+			line-height: 18px;
 		}
 	}
 }

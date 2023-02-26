@@ -30,6 +30,8 @@
 
 	&__suptitle {
 		display: block;
+		max-width: max-content;
+		margin: 0 auto;
 		font-weight: $title;
 		font-size: 14px;
 		line-height: 60px;
@@ -126,6 +128,10 @@
 		}
 		&__col {
 			min-height: auto;
+		}
+		&__btn-join {
+			font-size: 11px;
+			line-height: 20px;
 		}
 		&__title {
 			font-size: 30px;
