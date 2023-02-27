@@ -105,6 +105,7 @@
 			object-fit: cover;
 		}
 		&-img-big {
+			min-height: 182px;
 			grid-column: span 2;
 			grid-row: span 2;
 		}

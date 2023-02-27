@@ -6,6 +6,10 @@
 	&__slider {
 		position: relative;
 	}
+	&__inner {
+		min-height: 1080px;
+		height: 100vh;
+	}
 	&__arc {
 		position: absolute;
 		width: 189px;
@@ -14,8 +18,8 @@
 		top: 21%;
 	}
 	&__slide {
+		height: auto;
 		padding-left: 80px;
-		min-height: 1080px;
 		display: flex;
 		align-items: center;
 		position: relative;
@@ -346,7 +350,7 @@
 			font-size: 9px;
 			line-height: 12px;
 		}
-		&__soon {
+		&__soon-text {
 			font-size: 10px;
 			line-height: 24px;
 		}
@@ -360,6 +364,17 @@
 		}
 	}
 	@media ($media_xs) {
+		&__button-test {
+			font-size: 7px;
+			line-height: 9px;
+			padding: 12px 12px;
+		}
+		&__button-playmarket {
+			padding: 10px 10px;
+		}
+		&__button-download {
+			font-size: 8px;
+		}
 		&__prompt-item {
 			padding-top: 15px;
 		}
