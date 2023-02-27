@@ -1,5 +1,4 @@
 .benefits {
-	overflow: hidden;
 	margin-bottom: 30px;
 	&__list {
 		counter-reset: num;
@@ -76,6 +75,8 @@
 		object-fit: cover;
 	}
 	@media ($media_lg) {
+		overflow: hidden;
+		
 		.swiper-scrollbar {
 			bottom: 0px;
 			left: 0;
